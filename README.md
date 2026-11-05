@@ -154,7 +154,6 @@ The following official resources can help students verify scholarship informatio
 | Website | [fundzy.co.in](https://fundzy.co.in/) |
 | Developer | Srijan Gupta |
 | Project Team | OUTLIER |
-| Academic Programme | BCA — Data Science & Artificial Intelligence |
 | Hosting | GitHub Pages |
 | Domain | fundzy.co.in |
 | Development | HTML, CSS & JavaScript |
