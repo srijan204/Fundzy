@@ -1,0 +1,8 @@
+FUNDZY UPDATED WEBSITE
+
+1. Open index.html to preview the home page.
+2. Use the navigation to open Explore, How it Works, Our Team and About pages.
+3. The chatbot has clickable suggestions and accepts natural-language questions.
+4. To enable real Gemini AI, follow AI-SETUP.md and deploy backend/worker.js. Never put your API key in frontend files.
+5. Catalogue entries are dated snapshots. Verify current details with the official provider.
+6. Course names are broad examples; eligibility must be checked scheme by scheme.

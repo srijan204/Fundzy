@@ -2,174 +2,113 @@
 
 **Scholarship information, minus the overwhelm.**
 
-[![Live Website](https://img.shields.io/badge/Live%20Website-fundzy.co.in-6366F1?style=for-the-badge)](https://fundzy.co.in/)
+Fundzy is an independent student information project for students in Uttar Pradesh and across India. It helps students discover scholarship programmes, understand eligibility pointers, prepare documents and find the official application portal.
 
-**Designed & Developed by Srijan Gupta**
+## Features
+- Search scholarship guides and filter by study level, state/coverage, category and listed application status.
+- Read eligibility pointers, document-preparation checklists, source dates and official links.
+- Redirect to the official provider to complete the real application.
+- Track personal preparation and application status in the current browser.
+- Export/import tracker data as JSON.
+- Responsive layout for phones and desktops.
+- Mobile navigation menu with accessible open/close controls.
+- Light/dark theme toggle that remembers the choice in the current browser.
 
-Fundzy is an independent, student-built scholarship discovery platform designed to help students across India explore educational scholarship opportunities.
+## Tech stack
+- HTML5 (`index.html`)
+- CSS3 (`styles.css`)
+- Vanilla JavaScript (`app.js`)
+- Scholarship data records (`data.js`)
+- Browser `localStorage` for the local tracker
+- JSON for tracker backup/export
 
-It provides a simpler way to discover scholarship programmes, understand eligibility requirements, prepare necessary documents and access official application portals.
+## Run locally
+1. Extract the project.
+2. Open `index.html` in a modern browser.
+3. If needed, run `python -m http.server 8000` in this directory and visit `http://localhost:8000`.
 
-Our mission is to make scholarship information easier to find and understand, helping students take the next step towards their educational goals.
+## Data accuracy
+The catalogue is a manually maintained snapshot, not a live API and not a complete list of all scholarships. It was reviewed against official listings on 18 October 2026. NSP listings include several AY 2026–27 programmes with a student application deadline of 31 October 2026; Reliance Foundation 2026–27 UG/PG opportunities were announced, but a deadline was not confirmed in the reviewed announcement. These dates may change. Verify eligibility, deadlines, documents and live availability on the official portal before applying.
 
-🌐 **Visit Fundzy:** [https://fundzy.co.in/](https://fundzy.co.in/)
+## Privacy
+The prototype has no user accounts or document uploads. Tracker data is stored in the current browser and is not synced across devices. Do not enter Aadhaar numbers, bank details, passwords, OTPs or other sensitive information.
 
----
+## Disclaimer
+Fundzy is an independent information project and is not affiliated with or endorsed by a government department or scholarship authority. Actual applications, identity checks, document uploads and award decisions remain with the official provider.
 
-## ✨ Features
+## Copyright
+Copyright © 2026 Fundzy. All rights reserved. No open-source license is granted.
 
-- **Scholarship Discovery:** Explore national and selected state-level scholarship programmes.
-- **Smart Search & Filters:** Find scholarships by study level, state, category and application status.
-- **Eligibility Information:** Understand the basic requirements before applying.
-- **Document Checklists:** Review the documents commonly required for scholarship applications.
-- **Official Application Links:** Visit the scholarship provider's official portal to complete the application.
-- **Application Tracker:** Track personal preparation and application progress directly in your browser.
-- **Responsive Design:** Access Fundzy on desktops, tablets and mobile devices.
-- **Mobile Navigation:** Easy-to-use navigation with accessible menu controls.
-- **Light & Dark Mode:** Choose a theme according to your preference.
+## Official resources
+- National Scholarship Portal: https://scholarships.gov.in/All-Scholarships
+- Uttar Pradesh Scholarship Portal: https://scholarship.up.gov.in/
+- PIB notice on NMMSS deadline extension for 2026–27: https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2317657&lang=1&reg=3
+- Reliance Foundation Scholarships 2026–27 announcement: https://www.reliancefoundation.org/media/media-release/Reliance_Foundation_Scholarships_2026-27
 
-## 🛠️ Technology Stack
 
-Fundzy is built using lightweight and modern web technologies.
+## India-wide coverage and state portals
+The main catalogue includes national programmes and selected state-specific guides. The state filter shows national programmes for the selected state, plus matching state/region-specific guides already in the catalogue. The state portal section provides verified starting links for NSP, Delhi, Maharashtra, Bihar, Odisha and Uttar Pradesh. It is not yet a complete catalogue of every state scheme; students should verify local schemes with the relevant official state department.
 
-| Technology | Purpose |
-|---|---|
-| HTML5 | Website structure and content |
-| CSS3 | Styling, layout and responsiveness |
-| JavaScript | Search, filters and website interactions |
-| Local Storage | Saves tracker information in the browser |
-| GitHub Pages | Website hosting and deployment |
-| Custom Domain | `fundzy.co.in` |
+## Adding the four team photos
+1. Create a folder named `images` next to `index.html`.
+2. Save your four images as `member-1.jpg`, `member-2.jpg`, `member-3.jpg` and `member-4.jpg`.
+3. In `index.html`, find the `Meet our little team` section.
+4. Replace each `.team-photo-placeholder` block with an image, for example:
+   `<img class="team-photo" src="images/member-1.jpg" alt="Member One">`
+5. Update each member's name, course/branch and project role in the same section.
 
-The website uses a static architecture and does not require a dedicated backend or user account.
 
-## 🌐 Access Fundzy Online
+## Multi-page website update
+- `index.html` — home page and original scholarship directory/tracker experience.
+- `explore.html` — dedicated scholarship directory with search and study-level/status filters.
+- `how-it-works.html` — student guide to discovery, eligibility, document preparation and official applications.
+- `team.html` — team profiles and the supplied team photographs.
+- `about.html` — project purpose, scope, accuracy notes and disclaimer.
+- `site.js` — shared navigation and theme controls for the additional pages.
+- `explore.js` — directory renderer for the dedicated Explore page.
 
-Fundzy is live and publicly accessible. You can visit the website directly using the link below.
+## Course coverage in Fundzy AI
+The assistant is designed for students across school, management (BBA/MBA/BBM), computer and IT (BCA/MCA), commerce, arts and humanities, science, engineering, diploma/polytechnic, medical, nursing, pharmacy, law, education, journalism, vocational programmes and research/PhD. Students can type any course; the chatbot must not assume eligibility unless the scheme rules confirm it.
 
-**Website:** [https://fundzy.co.in/](https://fundzy.co.in/)
+## Chatbot suggestions and language
+The chatbot opens with clickable suggested questions. It has no language selector and is instructed to respond in the language used by the student, including Hindi and Hinglish. Genuine Gemini replies require deploying `backend/worker.js` and configuring the Worker secrets described in `AI-SETUP.md`. Without that configuration, only the local catalogue fallback works.
 
-Simply open the link in any modern web browser on your mobile, tablet or computer.
+## Catalogue accuracy reminder
+The included NSP entries are dated listing snapshots, not a live government feed or a guarantee that every student can apply. Some listings may be renewal-only or have conditions not represented in the summary. Check the latest official scheme specification and portal before applying.
 
-No installation or local setup is required.
 
-## 👥 Project Team
+## Multi-page website update
+- `index.html` — home page and original scholarship directory/tracker experience.
+- `explore.html` — dedicated scholarship directory with search and study-level/status filters.
+- `how-it-works.html` — student guide to discovery, eligibility, document preparation and official applications.
+- `team.html` — team profiles and the supplied team photographs.
+- `about.html` — project purpose, scope, accuracy notes and disclaimer.
+- `site.js` — shared navigation and theme controls for the additional pages.
+- `explore.js` — directory renderer for the dedicated Explore page.
 
-Fundzy is developed and maintained by a student team.
+## Course coverage in Fundzy AI
+The assistant is designed for students across school, management (BBA/MBA/BBM), computer and IT (BCA/MCA), commerce, arts and humanities, science, engineering, diploma/polytechnic, medical, nursing, pharmacy, law, education, journalism, vocational programmes and research/PhD. Students can type any course; the chatbot must not assume eligibility unless the scheme rules confirm it.
 
-| Team Member | Project Responsibility |
-|---|---|
-| **Srijan Gupta** | Project Lead & Website Developer |
-| **Roma Vishwakarma** | Scholarship Research & Content |
-| **Ashutosh Yadav** | Academic Resources & Documentation |
-| **Abhijeet Pal** | Quality Assurance & UI Testing |
+## Chatbot suggestions and language
+The chatbot opens with clickable suggested questions. It has no language selector and is instructed to respond in the language used by the student, including Hindi and Hinglish. Genuine Gemini replies require deploying `backend/worker.js` and configuring the Worker secrets described in `AI-SETUP.md`. Without that configuration, only the local catalogue fallback works.
 
-**Project Development:** Srijan Gupta led the website's development, including planning, design, implementation and technical development.
+## Catalogue accuracy reminder
+The included NSP entries are dated listing snapshots, not a live government feed or a guarantee that every student can apply. Some listings may be renewal-only or have conditions not represented in the summary. Check the latest official scheme specification and portal before applying.
 
-**Academic Programme:** BCA — Data Science & Artificial Intelligence.
 
-## 🎯 Project Objective
+## Contact
+For Fundzy questions and feedback: [info.fundzy@gmail.com](mailto:info.fundzy@gmail.com).
 
-The main objective of Fundzy is to make scholarship discovery simpler and more accessible for students across India.
+## Scholarship catalogue note
+The catalogue contains 50 programme entries. Entries marked to check the official notice are discovery guides, not confirmation that applications are currently open. Always verify current eligibility, award details and deadlines with the linked official provider.
 
-The platform aims to:
 
-- Reduce the difficulty of finding scholarship information.
-- Help students understand basic eligibility requirements.
-- Provide useful document-preparation guidance.
-- Connect students with official scholarship application portals.
-- Make scholarship information easier to explore through a simple interface.
+## Current catalogue release
 
-## 📚 India-Wide Coverage
+This ZIP contains **51 scholarship programme entries**. It includes course filters for BBA / MBA / BBM, BCA / MCA, B.Com / M.Com, BA / MA, B.Sc / M.Sc, B.Tech / M.Tech, Diploma / Polytechnic, MBBS / BDS, Nursing / Pharmacy, LLB / LLM, B.Ed / M.Ed, PhD / Research, Journalism, Vocational courses and School education.
 
-Fundzy is designed for students across India.
+The catalogue is a discovery guide, not a live synchronized feed. Verify current eligibility, award amount, documents and application deadlines on the official provider website. Course tags are for filtering and do not establish eligibility.
 
-The main catalogue includes national scholarship programmes and selected state-specific scholarship guides.
+## Contact
 
-The state filter helps users discover national opportunities alongside relevant state or regional programmes already included in the catalogue.
-
-The website also provides starting links to selected scholarship portals, including:
-
-- National Scholarship Portal
-- Uttar Pradesh Scholarship Portal
-- Delhi Scholarship Portal
-- Maharashtra Scholarship Portal
-- Bihar Scholarship Portal
-- Odisha Scholarship Portal
-
-This is not a complete directory of every scholarship scheme in India. Students should also check the official scholarship department of their respective state for additional opportunities.
-
-## 📊 Scholarship Data & Accuracy
-
-Fundzy maintains a manually organised scholarship catalogue. It is not a live government database, API or complete list of every scholarship available in India.
-
-Scholarship details, eligibility criteria, document requirements and application deadlines may change.
-
-Students are encouraged to verify the following information through the relevant official provider:
-
-- Eligibility requirements
-- Application opening and closing dates
-- Required documents
-- Application instructions
-- Current scholarship availability
-
-The official scholarship provider's website remains the final source of information.
-
-## 🔒 Privacy & Data Storage
-
-Fundzy does not currently require user accounts or collect scholarship application documents.
-
-- Personal tracker information is stored locally in the user's browser.
-- Tracker information is not automatically synchronised between devices.
-- Clearing browser storage may remove saved tracker information.
-- Users should avoid entering sensitive information such as Aadhaar numbers, bank details, passwords and OTPs.
-
-Fundzy does not process or submit scholarship applications.
-
-## ⚠️ Disclaimer
-
-Fundzy is an independent student information project. It is not affiliated with, sponsored by or officially endorsed by any government department, scholarship authority or educational institution.
-
-The platform only helps students discover and understand scholarship information.
-
-Actual applications, identity verification, document submissions, eligibility decisions and scholarship awards are handled by the respective official providers.
-
-Always use official portals for applications and verify the latest requirements before submitting any information.
-
-## 🔗 Official Resources
-
-The following official resources can help students verify scholarship information.
-
-- [National Scholarship Portal](https://scholarships.gov.in/)
-- [Uttar Pradesh Scholarship Portal](https://scholarship.up.gov.in/)
-- [University Grants Commission (UGC)](https://www.ugc.gov.in/)
-- [Reliance Foundation Scholarships](https://www.reliancefoundation.org/media/media-release/Reliance_Foundation_Scholarships_2026-27)
-
-## 📌 Project Information
-
-| Detail | Information |
-|---|---|
-| Project Name | Fundzy |
-| Project Type | Scholarship Discovery System |
-| Website | [fundzy.co.in](https://fundzy.co.in/) |
-| Developer | Srijan Gupta |
-| Project Team | OUTLIER |
-| Hosting | GitHub Pages |
-| Domain | fundzy.co.in |
-| Development | HTML, CSS & JavaScript |
-
-## © Copyright
-
-Copyright © 2026 **Srijan Gupta**. All rights reserved.
-
-Fundzy is an independently developed student project.
-
-No open-source licence is granted. Reuse, redistribution or modification of this project's source code is not permitted without prior written permission.
-
----
-
-**Fundzy**
-
-*Discover opportunities. Understand eligibility. Take the next step.*
-
-**Built by students, for students.**
+[info.fundzy@gmail.com](mailto:info.fundzy@gmail.com)
